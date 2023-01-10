@@ -24,7 +24,8 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	font-family: "Rubik", sans-serif;
+	font-family: "Rubik", "Arial", sans-serif;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -138,6 +139,62 @@ ul {
 	border-radius: 16px;
 }
 
+.button--favorite {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 46px;
+	height: 46px;
+	background-color: transparent;
+
+	border-radius: 50%;
+	border: 2px solid var(--dark);
+}
+
+.button--checked path {
+	stroke: var(--decor);
+	fill: var(--decor);
+}
+
+.button--movie {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 330px;
+	height: 46px;
+	background-color: transparent;
+
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 32px;
+
+	border-radius: 15px;
+	border: 2px solid var(--dark);
+}
+
+.button--movie span {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button--movie svg {
+	margin-left: 22px;
+}
+
+.button--movie path {
+	stroke: var(--dark);
+}
+
+.button--watched {
+	background-color: var(--dark);
+	color: var(--white);
+}
+
+.button--watched path { 
+	stroke: var(--white);
+}
+
 /* Main */
 
 .main {
@@ -146,6 +203,8 @@ ul {
 	padding: 64px;
 }
 
+/* Карточки фильмов */
+
 .movies__list {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -153,12 +212,60 @@ ul {
 }
 
 .movie {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
 	background-color: var(--white);
 	border-radius: 10px;
 	padding: 26px;
 }
 
+.movie__title {
+	margin: 0;
+	margin-bottom: 7px;
+	padding: 0;
 
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.movie__year {
+	order: -1;
+	margin-bottom: 7px;
+
+	font-size: 18px;
+	line-height: 28px;
+	color: var(--gray);
+}
+
+.movie__genres {
+	margin: 0;
+
+	font-size: 18px;
+	line-height: 28px;
+	color: var(--gray);
+}
+
+.movie__img-wrap {
+	order: -2;
+	display: flex;
+	max-width: 418px;
+	width: 418px;
+	margin-bottom: 15px;
+}
+
+.movie__img {
+	border-radius: 15px;
+}
+
+.movie__buttons {
+	display: flex;
+	justify-content: space-between;
+	align-self: stretch;
+	margin-top: 15px;
+}
 
 /* Футер */
 
