@@ -121,45 +121,48 @@ ul {
 	background-size: 19px;
 }
 
-.button {
+.button-action {
 	display: flex;
     align-items: center;
+	justify-content: center;
+
+	padding: 5px 40px;
+	background-color: var(--accent);
+
+	font-family: inherit;
+	color: var(--white);
 	font-weight: bold;
 	font-size: 18px;
-	font-family: inherit;
-	border: none;
-	cursor: pointer;
+	
 	text-decoration: none;
-}
-
-.button--yellow {
-	background-color: var(--accent);
-	color: var(--white);
-	padding: 5px 40px;
 	border-radius: 16px;
-}
+}	
 
-.button--favorite {
+.button-like {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	width: 46px;
 	height: 46px;
 	background-color: transparent;
 
 	border-radius: 50%;
 	border: 2px solid var(--dark);
+
+	cursor: pointer;
 }
 
-.button--checked path {
+.button--liked path {
 	stroke: var(--decor);
 	fill: var(--decor);
 }
 
-.button--movie {
+.button-done {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	min-width: 330px;
 	height: 46px;
 	background-color: transparent;
@@ -170,19 +173,21 @@ ul {
 
 	border-radius: 15px;
 	border: 2px solid var(--dark);
+
+	cursor: pointer;
 }
 
-.button--movie span {
+.button-done span {
     display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.button--movie svg {
+.button-done svg {
 	margin-left: 22px;
 }
 
-.button--movie path {
+.button-done path {
 	stroke: var(--dark);
 }
 
@@ -291,7 +296,10 @@ ul {
 	transition: all 0.2s ease-in-out;
 }
 
-.arrow-up {
+.button-arrow-up {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 46px;
 	height: 46px;
 	padding: 0;
