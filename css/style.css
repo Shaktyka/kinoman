@@ -141,7 +141,13 @@ ul {
 	
 	text-decoration: none;
 	border-radius: 16px;
+
+	transition: all 0.2s ease-in-out;
 }	
+
+.button-action:hover {
+	background-color: #ff9800;
+}
 
 .button-like {
 	display: flex;
@@ -156,11 +162,20 @@ ul {
 	border: 2px solid var(--dark);
 
 	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.button-like:hover path {
+	stroke: var(--decor);
 }
 
 .button--liked path {
 	stroke: var(--decor);
 	fill: var(--decor);
+}
+
+.button--liked:hover path {
+	fill: var(--white);
 }
 
 .button-done {
@@ -180,6 +195,7 @@ ul {
 	border: 2px solid var(--dark);
 
 	cursor: pointer;
+	transition: all 0.2s ease-in-out;
 }
 
 .button-done span {
@@ -203,6 +219,24 @@ ul {
 
 .button--watched path { 
 	stroke: var(--white);
+}
+
+.button-done:hover {
+	background-color: var(--dark);
+	color: var(--white);
+}
+
+.button-done:hover path {
+	stroke: var(--white);
+}
+
+.button--watched:hover {
+	background-color: var(--white);
+	color: var(--dark);
+}
+
+.button--watched:hover path {
+	stroke: var(--dark);
 }
 
 /* Main */
@@ -320,10 +354,10 @@ ul {
 	cursor: pointer;
 }
 
-.arrow-up:hover {
+.button-arrow-up:hover {
 	background-color: white;
 }
 
-.arrow-up:hover .arrow-icon {
+.button-arrow-up:hover .arrow-icon {
 	stroke: var(--dark);
 }
