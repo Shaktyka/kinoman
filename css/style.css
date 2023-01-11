@@ -30,6 +30,8 @@ body {
 	line-height: 1.5;
 }
 
+/* Общие стили */
+
 *, *::before, *::after {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -99,12 +101,15 @@ ul {
 	width: 166px;
 }
 
+.header__actions {
+	margin-top: 30px;
+}
+
 .actions__form {
 	display: flex;
 	align-items: stretch;
 	justify-content: space-between;
 	height: 42px;
-	margin-top: 30px;
 }
 
 .search {
