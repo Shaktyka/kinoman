@@ -104,5 +104,29 @@
 				</div>
 			</footer>
 		</div>
+		<!-- Модальное окно добавления в закладки -->
+		<section class="modal modal--bookmark">
+			<div class="modal__content">
+				<h2 class="modal__title">Создание закладки</h2>
+				<form class="form modal__form" action="#" method="get">
+					<div class="form__group">
+						<label for="bookmark-name">Название</label>
+						<input class="form__input text-input" type="text" id="bookmark-name" name="bookmark-name" placeholder="Type something here...">
+					</div>
+					<div class="form__group">
+						<label for="bookmark-year">Год выпуска</label>
+						<input class="form__input text-input" type="text" id="bookmark-year" name="bookmark-year" placeholder="Type something here...">
+					</div>
+					<div class="form__group">
+						<label for="bookmark-name">Постер</label>
+						<input class="form__input text-input text-input--icon" type="text" id="bookmark-name" name="bookmark-name" placeholder="Type something here...">
+					</div>
+					<div class="form__footer">
+						<button class="modal-button" type="button" name="cancel">Отменить</button>
+						<button class="modal-button modal-button--target" type="button" name="cancel">Сохранить</button>
+					</div>
+				</form>
+			</div>
+		</section>
 	</body>
 </html>

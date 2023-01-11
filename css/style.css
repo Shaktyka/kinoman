@@ -361,3 +361,9 @@ ul {
 .button-arrow-up:hover .arrow-icon {
 	stroke: var(--dark);
 }
+
+/* Модальные окна */
+
+.show {
+	display: flex;
+}
