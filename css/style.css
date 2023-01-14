@@ -3,9 +3,13 @@
 /* CSS-переменные */
 :root {
 	--dark: #34343E;
+	--text-color: #1D1D1F;
 	--background: #EDEDED;
 	--white: #FDFDFD;
+	--accent-white: #FFFFFF;
+	--button-text: #FAFAFC;
 	--accent: #FBA808;
+	--yellow: #FF9800;
 	--gray: #7A7D84;
 	--decor: #FF4949;
 }
@@ -108,17 +112,35 @@ ul {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 28px;
-	color: #34343E;
+	color: var(--dark);
 }
+
+::-webkit-input-placeholder {
+	color: var(--gray);
+}
+
+/* Firefox 19+ */
+::-moz-placeholder {
+	color:var(--gray);
+}
+
+/* Firefox 18- */
+:-moz-placeholder {
+	color:var(--gray);
+}
+
+:-ms-input-placeholder {
+	color:var(--gray);
+}   
 
 .form__input {
 	width: 100%;
 	padding: 16px 24px;
-	background-color: #FFFFFF;
+	background-color: var(--accent-white);
 
 	color: var(--gray);
 
-	border: 2px solid #34343E;
+	border: 2px solid var(--dark);
 	border-radius: 16px;
 }
 
@@ -194,7 +216,7 @@ ul {
 }	
 
 .button-action:hover {
-	background-color: #ff9800;
+	background-color: var(--yellow);
 }
 
 .button-round {
@@ -372,7 +394,7 @@ ul {
 .copy {
 	margin: 0;
 	font-size: 18px;
-	color: #1d1d1f;
+	color: var(--text-color);
 }
 
 .arrow-icon {
@@ -418,7 +440,7 @@ ul {
 	padding: 70px 61px 57px;
 	transform: translate(-50%, -50%);
 	width: 539px;
-	background-color: #ffffff;
+	background-color: var(--accent-white);
 
 	border-radius: 10px;
 }
@@ -437,7 +459,8 @@ ul {
 	font-weight: 500;
 	font-size: 36px;
 	line-height: 43px;
-	color: #1D1D1F;
+	color: var(--text-color);
+	text-align: center;
 }
 
 #bookmark-poster {
@@ -458,9 +481,9 @@ ul {
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 32px;
-	color: #34343E;
+	color: var(--dark);
 
-	border: 2px solid #34343E;
+	border: 2px solid var(--dark);
 	border-radius: 16px;
 
 	cursor: pointer;
@@ -473,13 +496,13 @@ ul {
 }
 
 .modal-button--target {
-	background-color: #FBA808;
-	border-color: #FBA808;
-	color: #FAFAFC;
+	background-color: var(--accent);
+	border-color: var(--accent);
+	color: var(--button-text);
 }
 
 .modal-button--target:hover {
-	background-color: #ff9800;
+	background-color: var(--yellow);
 }
 
 /* Модальное окно просмотра фильма */
@@ -515,11 +538,11 @@ ul {
 	padding: 0;
 	margin: 0;
 
-	font-family: 'Rubik';
+	font-family: "Rubik";
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 28px;
-	color: #34343E;
+	color: var(--dark);
 }
 
 .modal--movie .movie__buttons {
@@ -528,6 +551,36 @@ ul {
 
 .modal--movie .button-done {
 	min-width: 270px;
+}
+
+/* Модальное окно редактирования закладки */
+
+.modal--bookmark-edit.modal {
+    padding: 56px 61px 57px;
+}
+
+.modal--bookmark-edit .modal__title {
+	margin-bottom: 5px;
+}
+
+.modal--bookmark-edit .form__group {
+	margin-bottom: 14px;
+}
+
+.modal-button--delete {
+	padding: 6px 56px;
+	background: var(--dark);
+
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 32px;
+	color: var(--button-text);
+
+	border-radius: 16px;
+}
+
+.modal--bookmark-edit .form__footer {
+	margin-top: 23px;
 }
 
 /* Служебные классы */
