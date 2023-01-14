@@ -19,7 +19,7 @@
 					</a>
 					<div class="actions header__actions">
 						<form class="form actions__form" action="#" method="get">
-							<input class="form__input search-input" id="search" type="search" placeholder="Type something here...">
+							<input class="form__input icon-input" id="search" type="search" placeholder="Type something here...">
 							<a class="button-action" href="#" id="add">Добавить</a>
 							<a class="button-action" href="#" id="watch">Что посмотреть?</a>
 						</form>
@@ -147,19 +147,19 @@
 				<form class="form modal__form" action="#" method="get">
 					<div class="form__group">
 						<label class="form__label" for="bookmark-name">Название</label>
-						<input class="form__input text-input" type="text" id="bookmark-name" name="bookmark-name" placeholder="Type something here...">
+						<input class="form__input" type="text" id="bookmark-name" name="bookmark-name" placeholder="Type something here...">
 					</div>
 					<div class="form__group">
 						<label class="form__label" for="bookmark-year">Год выпуска</label>
-						<input class="form__input text-input" type="text" id="bookmark-year" name="bookmark-year" placeholder="Type something here...">
+						<input class="form__input" type="text" id="bookmark-year" name="bookmark-year" placeholder="Type something here...">
 					</div>
-					<div class="form__group has-icon">
-						<label class="form__label" for="bookmark-name">Постер</label>
-						<input class="form__input text-input" type="text" id="bookmark-name" name="bookmark-name" placeholder="Type something here...">
+					<div class="form__group">
+						<label class="form__label" for="bookmark-poster">Постер</label>
+						<input class="form__input icon-input" type="text" id="bookmark-poster" name="bookmark-poster" placeholder="Type something here...">
 					</div>
 					<div class="form__footer">
-						<button class="modal-button modal-button--cancel" type="button" name="cancel">Отменить</button>
-						<button class="modal-button modal-button--target" type="button" name="cancel">Сохранить</button>
+						<button class="modal-button modal-button--cancel" id="bookmark-cancel" type="button" name="cancel">Отменить</button>
+						<button class="modal-button modal-button--target" id="bookmark-submit" type="submit" name="cancel">Сохранить</button>
 					</div>
 				</form>
 			</div>

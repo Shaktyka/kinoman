@@ -91,6 +91,10 @@ ul {
 
 /* Классы форм */
 
+.form {
+	width: 100%;
+}
+
 .form__group {
 	margin-bottom: 30px;
 }
@@ -118,6 +122,24 @@ ul {
 	border-radius: 16px;
 }
 
+.icon-input {
+	background-color: var(--white);
+    padding-left: 64px;
+
+	font-family: inherit;
+	font-size: 18px;
+	color: var(--gray);
+
+	background-repeat: no-repeat;
+}
+
+.form__footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 31px;
+	margin-top: 63px;
+}
+
 /* Хедер */
 
 .header {
@@ -141,17 +163,15 @@ ul {
 	height: 42px;
 }
 
-.search-input {
-	background-color: var(--white);
-	padding: 7px 20px 7px 64px;
-	font-family: inherit;
-	font-size: 18px;
-	color: var(--gray);
+#search {
 	width: 40%;
 	background-image: url(../images/search.svg);
-	background-repeat: no-repeat;
 	background-position: 25px center;
 	background-size: 19px;
+
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 20px;
 }
 
 .button-action {
@@ -417,33 +437,10 @@ ul {
 	color: #1D1D1F;
 }
 
-.modal__form {
-	width: 100%;
-}
-
-.has-icon {
-	position: relative;
-}
-
-.has-icon .form__input {
-	padding-left: 64px;
-}
-
-.has-icon .form__input::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 10px;
-	height: 10px;
-	background-color: red;
-	z-index: 5;
-}
-
-.form__footer {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 31px;
-	margin-top: 63px;
+#bookmark-poster {
+	background-image: url(../images/skrep.svg);
+	background-position: 25px center;
+	background-size: 17px;
 }
 
 .modal-button {
