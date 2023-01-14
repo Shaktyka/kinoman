@@ -5,7 +5,7 @@ function getFullName () {
 
 // Отдаёт инициалы человека:
 function getInitials () {
-    return this.lastName;
+    return `${this.firstName[0]}.${this.lastName[0]}.`; ;
 }
 
 function User (firstName, lastName) {
@@ -17,4 +17,24 @@ function User (firstName, lastName) {
 
 const newUser = new User('Елена', 'Петренко');
 
-console.log(newUser.getFullName());
+// console.log(newUser.getInitials());
+
+const transformTo = (obj, typeName) => {
+    let valueOfNewType;
+
+    if (typeName === 'string') {
+        valueOfNewType = String(obj);
+    } else if (typeName === 'number') {
+        valueOfNewType = Number(obj);
+    } else if (typeName === 'boolean') {
+        valueOfNewType = Boolean(obj);
+    } else {
+        valueOfNewType = 'Метод неизвестен';
+    }
+
+    console.log(valueOfNewType);
+};
+
+// transformTo("123", "number");
+// transformTo(345, "string");
+// transformTo(345, "boolean");

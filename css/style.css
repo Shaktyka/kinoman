@@ -365,6 +365,7 @@ ul {
 /* Модальные окна */
 
 .modal {
+	display: none;
 	position: absolute;
 	z-index: 5;
 	top: 50%;
