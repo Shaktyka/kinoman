@@ -55,3 +55,41 @@ const findAndSet = (selector, attributes) => {
 //     title: "Hyper Text Markup Language",
 //     id: "HTML-addr"
 // });
+
+/*
+Напишите две функции:
+
+Которая создает элемент и возвращает его, принимая первым аргументов название тега, 
+а вторым - объект с атрибутами.
+const element = makeElement("div", {
+	class: "Hello",
+	id: "hi"
+})
+*/
+
+const makeElement = ( tagName, params ) => {
+    const element = document.createElement(tagName);
+
+    for (let key in params) {
+        element.setAttribute(key, params[key]);
+    }
+
+    return element;
+};
+
+const element = makeElement("div", {
+	class: "Hello",
+	id: "hi"
+});
+
+// console.log(element);
+
+/*
+Которая принимает первым параметром элемент, в который нужно добавить элемент, переданный вторым параметром.
+mount(containerElement, childElement)
+*/
+const mount = (container, childElement) => {
+    if (container) {
+        container.append(childElement);
+    }
+};
