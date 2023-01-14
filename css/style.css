@@ -89,6 +89,35 @@ ul {
 	flex-flow: column;
 }
 
+/* Классы форм */
+
+.form__group {
+	margin-bottom: 30px;
+}
+
+.form__group:last-child {
+	margin-bottom: 0;
+}
+
+.form__label {
+	display: block;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+	color: #34343E;
+}
+
+.form__input {
+	width: 100%;
+	padding: 16px 24px;
+	background-color: #FFFFFF;
+
+	color: var(--gray);
+
+	border: 2px solid #34343E;
+	border-radius: 16px;
+}
+
 /* Хедер */
 
 .header {
@@ -112,9 +141,8 @@ ul {
 	height: 42px;
 }
 
-.search {
+.search-input {
 	background-color: var(--white);
-	border-radius: 16px;
 	padding: 7px 20px 7px 64px;
 	font-family: inherit;
 	font-size: 18px;
@@ -397,31 +425,6 @@ ul {
 
 .modal__form {
 	width: 100%;
-}
-
-.form__group {
-	margin-bottom: 30px;
-}
-
-.form__group:last-child {
-	margin-bottom: 0;
-}
-
-.form__label {
-	display: block;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 28px;
-	color: #34343E;
-}
-
-.form__input {
-	width: 100%;
-	padding: 16px 24px;
-	background-color: #FFFFFF;
-
-	border: 2px solid #34343E;
-	border-radius: 16px;
 }
 
 .has-icon {
