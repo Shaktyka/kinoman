@@ -38,3 +38,20 @@ const transformTo = (obj, typeName) => {
 // transformTo("123", "number");
 // transformTo(345, "string");
 // transformTo(345, "boolean");
+
+// Напишите функцию, которая может найти элемент и добавить ей атрибуты с помощью переданного объекта.
+const findAndSet = (selector, attributes) => {
+
+    const element = document.querySelector(selector);
+
+    for (let key in attributes) {
+        element.setAttribute(key, attributes[key]);
+    }
+
+    return element;
+};
+
+// const elem1 = findAndSet(".copy", {
+//     title: "Hyper Text Markup Language",
+//     id: "HTML-addr"
+// });
