@@ -197,7 +197,7 @@ ul {
 	background-color: #ff9800;
 }
 
-.button-like {
+.button-round {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -205,7 +205,6 @@ ul {
 	width: 46px;
 	height: 46px;
 	background-color: transparent;
-
 	border-radius: 50%;
 	border: 2px solid var(--dark);
 
@@ -213,7 +212,7 @@ ul {
 	transition: all 0.2s ease-in-out;
 }
 
-.button-like:hover path {
+.button-round:hover path {
 	stroke: var(--decor);
 }
 
@@ -224,6 +223,10 @@ ul {
 
 .button--liked:hover path {
 	fill: var(--white);
+}
+
+.button-edit {
+	
 }
 
 .button-done {
@@ -477,6 +480,54 @@ ul {
 
 .modal-button--target:hover {
 	background-color: #ff9800;
+}
+
+/* Модальное окно просмотра фильма */
+
+.modal--movie {
+	padding: 0;
+}
+
+.modal--movie .movie {
+	width: 100%;
+	padding: 0;
+}
+
+.modal--movie .movie__img-wrap {
+	width: 100%;
+	max-width: 100%;
+}
+
+.modal--movie .movie__img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.modal--movie .movie__info {
+	padding: 16px 61px 57px;
+}
+
+.modal--movie .movie__genres {
+	margin-bottom: 7px;
+}
+
+.movie__description {
+	padding: 0;
+	margin: 0;
+
+	font-family: 'Rubik';
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+	color: #34343E;
+}
+
+.modal--movie .movie__buttons {
+	margin-top: 24px;
+}
+
+.modal--movie .button-done {
+	min-width: 270px;
 }
 
 /* Служебные классы */
