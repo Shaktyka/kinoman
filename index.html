@@ -111,6 +111,11 @@
 		<!-- Модальное окно просмотра фильма -->
 		<section class="modal modal--movie">
 			<div class="modal__content">
+				<button class="modal__close" type="button">
+					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 1L13 13M1 13L13 1L1 13Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</button>
 				<article class="movie">
 					<div class="movie__img-wrap">
 						<img class="movie__img" src="./images/interstellar.png" alt="Интерстеллар">
@@ -173,7 +178,7 @@
 			</div>
 		</section>
 		<!-- Модальное окно редактирования закладки -->
-		<section class="modal modal--bookmark modal--bookmark-edit show">
+		<section class="modal modal--bookmark modal--bookmark-edit">
 			<div class="modal__content">
 				<h2 class="modal__title">Редактирование закладки</h2>
 				<form class="form modal__form" action="#" method="get">

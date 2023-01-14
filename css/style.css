@@ -445,6 +445,20 @@ ul {
 	border-radius: 10px;
 }
 
+.modal__close {
+	display: none;
+	top: 2px;
+	right: 7px;
+	padding: 10px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.modal__close:hover svg {
+	transform: scale(1.25);
+}
+
 .modal__content {
 	display: flex;
 	flex-direction: column;
@@ -509,6 +523,11 @@ ul {
 
 .modal--movie {
 	padding: 0;
+}
+
+.modal--movie .modal__close {
+	display: flex;
+	position: absolute;
 }
 
 .modal--movie .movie {
