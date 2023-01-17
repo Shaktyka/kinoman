@@ -432,7 +432,7 @@ ul {
 /* Модальные окна */
 
 .modal {
-	display: none;
+	display: flex;
 	position: absolute;
 	z-index: 5;
 	top: 50%;
@@ -608,3 +608,6 @@ ul {
 	display: flex;
 }
 
+.show-modal {
+    z-index: 2;
+}

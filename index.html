@@ -9,7 +9,6 @@
 		<title>Фаворит</title>
 	</head>
 	<body class="page">
-		<div class="bg-overlay"></div>
 		<div class="container">
 			<!-- Хедер -->
 			<header class="header">
@@ -108,104 +107,111 @@
 				</div>
 			</footer>
 		</div>
-		<!-- Модальное окно просмотра фильма -->
-		<section class="modal modal--movie">
-			<div class="modal__content">
-				<button class="modal__close" type="button">
-					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M1 1L13 13M1 13L13 1L1 13Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
-				</button>
-				<article class="movie">
-					<div class="movie__img-wrap">
-						<img class="movie__img" src="./images/interstellar.png" alt="Интерстеллар">
-					</div>
-					<div class="movie__info">
-						<span class="movie__year">2014</span>
-						<h3 class="movie__title">Интерстеллар</h3>
-						<p class="movie__genres">научная фантастика, приключения</p>
-						<p class="movie__description">
-							В беременную наемную убийцу по кличке Черная Мамба во время бракосочетания 
-							стреляет человек по имени Билл. Пуля в голове жертвы, кровь на подвенечном платье, 
-							темнота...
-						</p>
-						<div class="movie__buttons">
-							<button class="button-round button-edit" type="button" name="edit">
-								<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M13.232 3.23199L16.768 6.76799M14.732 1.73199C15.2009 1.26309 15.8369 0.999664 16.5 0.999664C17.1631 0.999664 17.7991 1.26309 18.268 1.73199C18.7369 2.2009 19.0003 2.83687 19.0003 3.49999C19.0003 4.16312 18.7369 4.79909 18.268 5.26799L4.5 19.036H1V15.464L14.732 1.73199Z" stroke="#34343E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-							<button class="button-round button-like" type="button" name="add-to-favorite">
-								<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M1.34255 3.7779C1.5687 3.23194 1.90017 2.73586 2.31804 2.31799C2.7359 1.90012 3.23198 1.56865 3.77795 1.3425C4.32392 1.11635 4.90909 0.999954 5.50004 0.999954C6.09099 0.999954 6.67616 1.11635 7.22213 1.3425C7.7681 1.56865 8.26417 1.90012 8.68204 2.31799L10 3.63599L11.318 2.31799C12.162 1.47407 13.3066 0.999966 14.5 0.999966C15.6935 0.999966 16.8381 1.47407 17.682 2.31799C18.526 3.16191 19.0001 4.30651 19.0001 5.49999C19.0001 6.69347 18.526 7.83807 17.682 8.68199L10 16.364L2.31804 8.68199C1.90017 8.26413 1.5687 7.76805 1.34255 7.22208C1.1164 6.67611 1 6.09095 1 5.49999C1 4.90904 1.1164 4.32387 1.34255 3.7779Z" fill="transparent" stroke="#34343E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-							<button class="button-done" type="button" name="watched">
-								<span>
-									Просмотрено
-									<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M2.125 9.125L6.625 13.625L17.875 2.375" stroke="#FDFDFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</span>
-							</button>
-						</div>
-					</div>
-				</article>
-			</div>
-		</section>
 		<!-- Модальное окно добавления в закладки -->
-		<section class="modal modal--bookmark">
-			<div class="modal__content">
-				<h2 class="modal__title">Создание закладки</h2>
-				<form class="form modal__form" action="#" method="get">
-					<div class="form__group">
-						<label class="form__label" for="bookmark-name">Название</label>
-						<input class="form__input" type="text" id="bookmark-name" name="bookmark-name" placeholder="Type something here...">
-					</div>
-					<div class="form__group">
-						<label class="form__label" for="bookmark-year">Год выпуска</label>
-						<input class="form__input" type="text" id="bookmark-year" name="bookmark-year" placeholder="Type something here...">
-					</div>
-					<div class="form__group">
-						<label class="form__label" for="bookmark-poster">Постер</label>
-						<input class="form__input icon-input" type="text" id="bookmark-poster" name="bookmark-poster" placeholder="Type something here...">
-					</div>
-					<div class="form__footer">
-						<button class="modal-button modal-button--cancel" id="bookmark-cancel" type="button" name="bookmark-cancel">Отменить</button>
-						<button class="modal-button modal-button--target" id="bookmark-submit" type="submit" name="bookmark-submit">Сохранить</button>
-					</div>
-				</form>
-			</div>
-		</section>
+		<div class="bg-overlay" id="modal-bookmark">
+			<section class="modal modal--bookmark">
+				<div class="modal__content">
+					<h2 class="modal__title">Создание закладки</h2>
+					<form class="form modal__form" action="#" method="get">
+						<div class="form__group">
+							<label class="form__label" for="bookmark-name">Название</label>
+							<input class="form__input" type="text" id="bookmark-name" name="bookmark-name" placeholder="Type something here...">
+						</div>
+						<div class="form__group">
+							<label class="form__label" for="bookmark-year">Год выпуска</label>
+							<input class="form__input" type="text" id="bookmark-year" name="bookmark-year" placeholder="Type something here...">
+						</div>
+						<div class="form__group">
+							<label class="form__label" for="bookmark-poster">Постер</label>
+							<input class="form__input icon-input" type="text" id="bookmark-poster" name="bookmark-poster" placeholder="Type something here...">
+						</div>
+						<div class="form__footer">
+							<button class="modal-button modal-button--cancel" id="bookmark-cancel" type="button" name="bookmark-cancel">Отменить</button>
+							<button class="modal-button modal-button--target" id="bookmark-submit" type="submit" name="bookmark-submit">Сохранить</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</div>
+		<!-- Модальное окно просмотра фильма -->
+		<div class="bg-overlay" id="modal-movie">
+			<section class="modal modal--movie">
+				<div class="modal__content">
+					<button class="modal__close" type="button">
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 1L13 13M1 13L13 1L1 13Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+					<article class="movie">
+						<div class="movie__img-wrap">
+							<img class="movie__img" src="./images/interstellar.png" alt="Интерстеллар">
+						</div>
+						<div class="movie__info">
+							<span class="movie__year">2014</span>
+							<h3 class="movie__title">Интерстеллар</h3>
+							<p class="movie__genres">научная фантастика, приключения</p>
+							<p class="movie__description">
+								В беременную наемную убийцу по кличке Черная Мамба во время бракосочетания 
+								стреляет человек по имени Билл. Пуля в голове жертвы, кровь на подвенечном платье, 
+								темнота...
+							</p>
+							<div class="movie__buttons">
+								<button class="button-round button-edit" type="button" name="edit">
+									<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.232 3.23199L16.768 6.76799M14.732 1.73199C15.2009 1.26309 15.8369 0.999664 16.5 0.999664C17.1631 0.999664 17.7991 1.26309 18.268 1.73199C18.7369 2.2009 19.0003 2.83687 19.0003 3.49999C19.0003 4.16312 18.7369 4.79909 18.268 5.26799L4.5 19.036H1V15.464L14.732 1.73199Z" stroke="#34343E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+								<button class="button-round button-like" type="button" name="add-to-favorite">
+									<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.34255 3.7779C1.5687 3.23194 1.90017 2.73586 2.31804 2.31799C2.7359 1.90012 3.23198 1.56865 3.77795 1.3425C4.32392 1.11635 4.90909 0.999954 5.50004 0.999954C6.09099 0.999954 6.67616 1.11635 7.22213 1.3425C7.7681 1.56865 8.26417 1.90012 8.68204 2.31799L10 3.63599L11.318 2.31799C12.162 1.47407 13.3066 0.999966 14.5 0.999966C15.6935 0.999966 16.8381 1.47407 17.682 2.31799C18.526 3.16191 19.0001 4.30651 19.0001 5.49999C19.0001 6.69347 18.526 7.83807 17.682 8.68199L10 16.364L2.31804 8.68199C1.90017 8.26413 1.5687 7.76805 1.34255 7.22208C1.1164 6.67611 1 6.09095 1 5.49999C1 4.90904 1.1164 4.32387 1.34255 3.7779Z" fill="transparent" stroke="#34343E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+								<button class="button-done" type="button" name="watched">
+									<span>
+										Просмотрено
+										<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M2.125 9.125L6.625 13.625L17.875 2.375" stroke="#FDFDFD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</button>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
+		</div>
 		<!-- Модальное окно редактирования закладки -->
-		<section class="modal modal--bookmark modal--bookmark-edit">
-			<div class="modal__content">
-				<h2 class="modal__title">Редактирование закладки</h2>
-				<form class="form modal__form" action="#" method="get">
-					<div class="form__group">
-						<label class="form__label" for="bookmark-name">Название</label>
-						<input class="form__input" type="text" id="bookmark-name" name="bookmark-name" placeholder="Type something here..." value="Убить Билла">
-					</div>
-					<div class="form__group">
-						<label class="form__label" for="bookmark-year">Год выпуска</label>
-						<input class="form__input" type="text" id="bookmark-year" name="bookmark-year" placeholder="Type something here..." value="2003">
-					</div>
-					<div class="form__group">
-						<label class="form__label" for="bookmark-poster">Постер</label>
-						<input class="form__input icon-input" type="text" id="bookmark-poster" name="bookmark-poster" placeholder="Type something here...">
-					</div>
-					<div class="form__group">
-						<label class="form__label" for="bookmark-poster">Удалить закладку</label>
-						<button class="modal-button modal-button--delete" id="bookmark-delete" type="button" name="bookmark-delete">Удалить</button>
-					</div>
-					<div class="form__footer">
-						<button class="modal-button modal-button--cancel" id="bookmark-cancel" type="button" name="bookmark-cancel">Отменить</button>
-						<button class="modal-button modal-button--target" id="bookmark-submit" type="submit" name="bookmark-submit">Сохранить</button>
-					</div>
-				</form>
-			</div>
-		</section>
+		<div class="bg-overlay" id="modal-bookmark-edit">
+			<section class="modal modal--bookmark modal--bookmark-edit">
+				<div class="modal__content">
+					<h2 class="modal__title">Редактирование закладки</h2>
+					<form class="form modal__form" action="#" method="get">
+						<div class="form__group">
+							<label class="form__label" for="bookmark-name">Название</label>
+							<input class="form__input" type="text" id="bookmark-name" name="bookmark-name" placeholder="Type something here..." value="Убить Билла">
+						</div>
+						<div class="form__group">
+							<label class="form__label" for="bookmark-year">Год выпуска</label>
+							<input class="form__input" type="text" id="bookmark-year" name="bookmark-year" placeholder="Type something here..." value="2003">
+						</div>
+						<div class="form__group">
+							<label class="form__label" for="bookmark-poster">Постер</label>
+							<input class="form__input icon-input" type="text" id="bookmark-poster" name="bookmark-poster" placeholder="Type something here...">
+						</div>
+						<div class="form__group">
+							<label class="form__label" for="bookmark-poster">Удалить закладку</label>
+							<button class="modal-button modal-button--delete" id="bookmark-delete" type="button" name="bookmark-delete">Удалить</button>
+						</div>
+						<div class="form__footer">
+							<button class="modal-button modal-button--cancel" id="bookmark-cancel" type="button" name="bookmark-cancel">Отменить</button>
+							<button class="modal-button modal-button--target" id="bookmark-submit" type="submit" name="bookmark-submit">Сохранить</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</div>
 		<script src="./js/main.js"></script>
 		<script src="./js/script.js"></script>
+		<script src="./js/dialog.js"></script>
 	</body>
 </html>
