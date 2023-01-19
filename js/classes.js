@@ -51,6 +51,7 @@ class Dialog {
         this.element = document.getElementById(dialogId);
         this.classToShow = classToSow;
         this.submitButton = document.getElementById('bookmark-submit');
+        this.bookmarkAddForm = document.forms.bookmarkCreate;
 
         if ( typeof onSaveClick === 'function' ) {
             this.submitButton.addEventListener('click', (evt) => {
@@ -66,6 +67,7 @@ class Dialog {
     // Метод закрытия окна
     close() {
         this.element.classList.remove(this.classToShow);
+        this.bookmarkAddForm.reset();
     }
 }
 
