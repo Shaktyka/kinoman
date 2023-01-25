@@ -1,0 +1,20 @@
+{
+  "name": "kinoman",
+  "version": "1.0.0",
+  "description": "Проект для киноманов",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shaktyka/kinoman.git"
+  },
+  "keywords": [],
+  "author": "Elena Petrenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shaktyka/kinoman/issues"
+  },
+  "homepage": "https://github.com/Shaktyka/kinoman#readme"
+}
