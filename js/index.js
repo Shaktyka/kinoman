@@ -19,23 +19,28 @@ const terminal = rl.createInterface({
     output: process.stdout
 });
 
+const showTable = (filePath) => {
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const csvAsObject = csvToObject(fileContent);
+    ctp.printTable(csvAsObject);
+};
+
 terminal.question('Введите команду:\n>> ', (commandName) => {
     if (commandName === 'show') {
         terminal.question('Введите путь до файла:\n>> ', (filePath) => {
             terminal.close();
-            const fileContent = fs.readFileSync(filePath, 'utf-8');
-            const csvAsObject = csvToObject(fileContent);
-            ctp.printTable(csvAsObject);
-
+            showTable(filePath);
         });
     };
     
     if (commandName === 'save') {
         terminal.question('Введите данные:\n>> ', (data) => {
             terminal.question('Введите путь до файла:\n>> ', (filePath) => {
+                terminal.close();
+                
                 const tableRow = data.split(' ').join(',') + '\n';
                 fs.appendFileSync(filePath, tableRow);
-                terminal.close();
+                showTable(filePath);
             });
         });
     }
