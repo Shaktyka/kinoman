@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Shaktyka/kinoman/issues"
   },
-  "homepage": "https://github.com/Shaktyka/kinoman#readme"
+  "homepage": "https://github.com/Shaktyka/kinoman#readme",
+  "dependencies": {
+    "console-table-printer": "^2.11.1"
+  }
 }
