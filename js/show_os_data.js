@@ -31,70 +31,73 @@ const terminal = rl.createInterface({
     output: process.stdout
 });
 
-// Выводит в консоль данные:
+// Выводит в консоль данные в виде таблицы:
 const showTable = (dataObject) => {
     ctp.printTable(dataObject);
 };
 
-// Вычисляет значение для переданного параметра
+// Вычисляет значение для переданного параметра:
 const getParamValue = (param) => {
-    let paramObj = {};
+    let paramValue;
 
     if (param === 'uptime') {
-        paramObj[param] = os.uptime();
+        paramValue = os.uptime();
 
     } else if (param === 'freemem') {
-        paramObj[param] = `${os.freemem() / 1000000000}Гб из ${os.totalmem() / 1000000000}Гб`;
+        paramValue = `${os.freemem() / 1000000000}Гб из ${os.totalmem() / 1000000000}Гб`;
 
     } else if (param === 'cores') {
-        paramObj[param] = os.cpus().length;
+        paramValue = os.cpus().length;
 
     } else if (param === 'procmodel') {
-        paramObj[param] = os.cpus()[0].model;
+        paramValue = os.cpus()[0].model;
 
     } else if (param === 'arch') {
-        paramObj[param] = os.arch();
+        paramValue = os.arch();
 
     } else if (param === 'hostname') {
-        paramObj[param] = os.hostname();
+        paramValue = os.hostname();
 
     } else {
-        paramObj[param] = 'Неизвестно';
+        paramValue = 'Неизвестно';
     }
 
-    return paramObj;
+    return paramValue;
 };
 
-// Собирает массив данных
-const getParamsData = (param) => {
+// Собирает массив данных:
+const getParamsArray = (param) => {
     const paramsArr = [];
-    let paramObj;
+    let paramObj = {};
 
     // Передан параметр:
     if (param) {
-        paramObj = getParamValue(param);
+        paramObj[param] = getParamValue(param);
         paramsArr.push(paramObj);
 
-    // Если надо вывести все:
+    // Вывести все:
     } else {
-        for (let oneParam in params) {
-            paramObj = getParamValue(params[oneParam]);
-            paramsArr.push(paramObj);
+        paramObj = { ...params };
+        for (let param in paramObj) {
+            paramObj[param] = getParamValue( paramObj[param] );
         }
+        paramsArr.push( paramObj );
     }
     
     return paramsArr;
 };
 
 // Получить запрос пользователя:
-terminal.question('Введите "all", если хотите увидеть все параметры, или название определённого параметра:\n>> ', (text) => {
+terminal.question(
+    'Введите "all", если хотите увидеть все параметры, или название определённого параметра:\n>> ', 
+    (text) => {
 
     if (text === 'all') {
 
         terminal.close();
 
         // Сбор массива объектов параметров
-        const paramsArray = getParamsData();
+        const paramsArray = getParamsArray();
         // Выводит таблицу:
         showTable( paramsArray );
 
@@ -104,10 +107,11 @@ terminal.question('Введите "all", если хотите увидеть в
 
         // Проверка существования параметра
         if (params[text]) {
-            // Если есть, то расчёт значения и вывод таблицы:
-            const paramsArray = getParamsData(params[text]);
 
+            // Расчёт значения и вывод таблицы:
+            const paramsArray = getParamsArray( params[text] );
             showTable( paramsArray );
+
         } else {
             console.log('Такого параметра не существует');
         }

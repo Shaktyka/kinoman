@@ -22,6 +22,7 @@ const terminal = rl.createInterface({
 const showTable = (filePath) => {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const csvAsObject = csvToObject(fileContent);
+    console.log(csvAsObject);
     ctp.printTable(csvAsObject);
 };
 
