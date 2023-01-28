@@ -42,16 +42,22 @@ const getParamValue = (param) => {
 
     if (param === 'uptime') {
         paramObj[param] = os.uptime();
+
     } else if (param === 'freemem') {
-        paramObj[param] = os.freemem();
+        paramObj[param] = `${os.freemem() / 1000000000}Гб из ${os.totalmem() / 1000000000}Гб`;
+
     } else if (param === 'cores') {
-        paramObj[param] = 4;
+        paramObj[param] = os.cpus().length;
+
     } else if (param === 'procmodel') {
-        paramObj[param] = 'модель';
+        paramObj[param] = os.cpus()[0].model;
+
     } else if (param === 'arch') {
         paramObj[param] = os.arch();
+
     } else if (param === 'hostname') {
         paramObj[param] = os.hostname();
+
     } else {
         paramObj[param] = 'Неизвестно';
     }
