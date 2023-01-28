@@ -87,9 +87,20 @@ const getParamsArray = (param) => {
     return paramsArr;
 };
 
+// Собирает текст подсказки
+const getHelp = () => {
+    let helpText = '';
+
+    for (let param in params) {
+        helpText += `${param} `; 
+    }
+
+    return helpText;
+};
+
 // Получить запрос пользователя:
 terminal.question(
-    'Введите "all", если хотите увидеть все параметры, или название определённого параметра:\n>> ', 
+    'Введите "all", если хотите увидеть все параметры, "?" для справки или название определённого параметра:\n>> ', 
     (text) => {
 
     if (text === 'all') {
@@ -100,6 +111,14 @@ terminal.question(
         const paramsArray = getParamsArray();
         // Выводит таблицу:
         showTable( paramsArray );
+
+    } else if ( text === '?' ) {
+
+        terminal.close();
+
+        // Сбор подсказки
+        const helpText = getHelp();
+        console.log(helpText);
 
     } else {
 
