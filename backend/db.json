@@ -1,0 +1,31 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "name": "Убить Билла",
+            "poster": "https://images.kinorium.com/movie/poster/215550/h280_50305583.jpg",
+            "year": 2003,
+            "genres": ["боевик", "триллер", "драма", "криминал"],
+            "is_favorite": true,
+            "is_viewed": false
+        },
+        {
+            "id": 2,
+            "name": "Интерстеллар",
+            "poster": "http://127.0.0.1:5500/images/interstellar.png",
+            "year": 2014,
+            "genres": ["научная фантастика", "приключения"],
+            "is_favorite": false,
+            "is_viewed": false
+        },
+        {
+            "id": 3,
+            "name": "Счастье в конверте",
+            "poster": "https://thumbs.dfs.ivi.ru/storage5/contents/8/f/3dfa2d5ca9fd277597b755b62ba84f.jpg",
+            "year": 2019,
+            "genres": ["семейный", "мелодрама"],
+            "is_favorite": false,
+            "is_viewed": true
+        }
+    ]
+}
