@@ -4,7 +4,7 @@
   "description": "Проект для киноманов",
   "main": "index.js",
   "scripts": {
-    "start:server": "json-server --watch ./db.json"
+    "start:server": "json-server --watch ./backend/db.json"
   },
   "repository": {
     "type": "git",
